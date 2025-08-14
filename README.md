@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DocStringEval: Automated Docstring Generation and Evaluation Framework
 
 A comprehensive framework for evaluating Large Language Models (LLMs) in automated docstring generation tasks for Python classes.
@@ -106,3 +107,7 @@ If you use this framework in your research, please cite:
 ## Contact
 
 For questions and support, please open an issue on GitHub or contact [your-email@domain.com].
+=======
+# DocString
+Evaluating LLMs DocString generation capabilities
+>>>>>>> 538667f2ab5e9997b0f8da1f54191f617268bef4
