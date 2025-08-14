@@ -258,5 +258,6 @@ If you use this framework in your research, please cite:
 ## Contact
 
 For questions and support, please:
-- Open an issue on [GitHub](https://github.com/GireeshS22/DocStringEval/issues)
+- **Reply to our [Twitter thread](https://x.com/GireeshS22/status/1956054735523303689)** for project-related questions and discussions
+- Open an issue on [GitHub](https://github.com/GireeshS22/DocStringEval/issues) for technical bugs and feature requests
 - Follow us on [X (Twitter)](https://x.com/GireeshS22) for updates and discussions
