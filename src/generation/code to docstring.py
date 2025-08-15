@@ -36,12 +36,16 @@ Only return the docstring for the program. Do not generate any additional detail
 
 #%%
 import pandas as pd
+import os
 from openai import OpenAI
+from dotenv import load_dotenv
 
+# Load environment variables
+load_dotenv()
 
 client = OpenAI(
-    base_url="https://ewvvf257bihy4qtj.us-east-1.aws.endpoints.huggingface.cloud/v1/",
-    api_key="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"  # Replace with your actual API key
+    base_url=os.getenv("HUGGINGFACE_ENDPOINT_1", "https://ewvvf257bihy4qtj.us-east-1.aws.endpoints.huggingface.cloud/v1/"),
+    api_key=os.getenv("HUGGINGFACE_API_KEY")  # Load from environment variable
 )
 
 # Create an empty list to store responses for each row
@@ -99,8 +103,8 @@ with open("Output\code-to-docstring-clean_codegemma-7b-it-dfe.json", "r") as fp:
 from openai import OpenAI
 
 client = OpenAI(
-	base_url="https://whk5k44myqhlqekc.us-east-1.aws.endpoints.huggingface.cloud/v1/", 
-	api_key="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" 
+	base_url=os.getenv("HUGGINGFACE_ENDPOINT_2", "https://whk5k44myqhlqekc.us-east-1.aws.endpoints.huggingface.cloud/v1/"), 
+	api_key=os.getenv("HUGGINGFACE_API_KEY")
 )
 
 chat_completion = client.chat.completions.create(

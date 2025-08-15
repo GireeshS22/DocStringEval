@@ -156,6 +156,20 @@ cd DocStringEval
 pip install -r requirements.txt
 ```
 
+### Environment Setup
+
+1. **Create Environment File**: Copy the example environment file and add your API keys:
+```bash
+cp .env.example .env
+```
+
+2. **Add Your API Keys**: Edit the `.env` file and add your Hugging Face API key:
+```bash
+HUGGINGFACE_API_KEY=your_actual_api_key_here
+```
+
+**Note**: Never commit your `.env` file to version control. It's already added to `.gitignore`.
+
 ### Basic Usage
 
 1. **Extract Classes**:

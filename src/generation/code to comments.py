@@ -48,12 +48,16 @@ Only return the json for Title and Description in the output. Do not return anyt
 
 #%%
 import pandas as pd
+import os
 from openai import OpenAI
+from dotenv import load_dotenv
 
+# Load environment variables
+load_dotenv()
 
 client = OpenAI(
-    base_url="https://f2bfcu86if7wsdfn.us-east-1.aws.endpoints.huggingface.cloud/v1/",
-    api_key="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"  # Replace with your actual API key
+    base_url=os.getenv("HUGGINGFACE_ENDPOINT_3", "https://f2bfcu86if7wsdfn.us-east-1.aws.endpoints.huggingface.cloud/v1/"),
+    api_key=os.getenv("HUGGINGFACE_API_KEY")  # Load from environment variable
 )
 
 # Create an empty list to store responses for each row
@@ -93,7 +97,7 @@ for prog in clean_code:
 #%%
 headers = {
 	"Accept" : "application/json",
-	"Authorization": "Bearer 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",
+	"Authorization": f"Bearer {os.getenv('HUGGINGFACE_API_KEY')}",
 	"Content-Type": "application/json",
 }
 
